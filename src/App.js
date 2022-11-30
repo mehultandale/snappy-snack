@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import ItemListing from './components/itemListing';
+import CategoryListing from './components/categoryListing';
 
 import './App.css';
 
@@ -12,6 +12,10 @@ class App extends React.Component {
         super(props);
         document.title = "SnappySnack";
         this.state = {
+            displayMainCategory: false,
+
+
+
             "categories": [
                 {
                     "id": 1,
@@ -25,18 +29,20 @@ class App extends React.Component {
                     "id": 3,
                     "name": "Breakfast"
                 }
-            ],
-            "products": [
-                {
-                    "name": "Pringles",
-                    "category": 1
-                },
-                {
-                    "name": "Sabudana khichdi",
-                    "category": 3
-                }
             ]
         };
+        this.categoryButtonEntered = this.categoryButtonEntered.bind(this);
+        this.categoryButtonLeft = this.categoryButtonLeft.bind(this);
+    }
+    categoryButtonEntered() {
+        this.setState({
+            "displayMainCategory": true
+        });
+    }
+    categoryButtonLeft() {
+        this.setState({
+            "displayMainCategory": false
+        });
     }
     render() {
         return (
@@ -45,9 +51,23 @@ class App extends React.Component {
                     Snappy<span className="subhead" >Snack</span>
                 </h1>
                 <h4>Parel's own home delivery service!</h4>
-                <button className="categoryBtn" >What can you get in Parel?</button>
-                <ItemListing items={this.state.categories} />
-                <ItemListing items={this.state.products} />
+
+                <div className="homeListing" >
+
+                    <div 
+                        className="categoryWrap"
+                        onMouseEnter={this.categoryButtonEntered}
+                        onMouseLeave={this.categoryButtonLeft} >
+                        
+                        <button className="categoryBtn" >Parel's Menu</button>
+
+                        <div className="categoryCols" >
+                            <CategoryListing  
+                                toDisplay={this.state.displayMainCategory}
+                                items={this.state.categories} />
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

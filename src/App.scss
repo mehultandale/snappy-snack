@@ -10,6 +10,18 @@ $light_black: #8A8686;
 $light_white: #FEFEFE;
 
 
+// Common
+.d-none {
+	display: none;
+}
+.d-block {
+	display: block;
+}
+.d-in-flx {
+	display: inline-flex;
+}
+
+
 // Header
 .logo {
 	color: $light_red;
@@ -32,11 +44,41 @@ h4 {
 
 // Category
 .categoryBtn {
-	font-size: 0.75em;
+	font-size: 0.9em;
 	color: #fff;
-	background: $dark_black;
+	background: #000;
 	cursor: pointer;
 	border: none;
-	border-radius: 4px;
 	padding: 0.5em 1em;
+	display: block;
+}
+
+
+// Home page
+.homeListing {
+	padding-left: 2em;
+}
+.itemListing {
+	font-size: 0.8em;
+	color: $light_white;
+	background: $dark_black;
+	width: fit-content;
+	list-style-type: none;
+	padding-left: 0em;
+	margin-top: 0em;
+
+	li {
+		cursor: pointer;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		padding-left: 0.75em;
+		padding-right: 0.75em;
+
+		&:hover {
+			background: $light_black;
+		}
+	}
+}
+.categoryWrap {
+	width: fit-content;
 }
