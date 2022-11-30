@@ -1,9 +1,12 @@
 
 
+/* React */
 import React from 'react';
 
+/* App specific */
 import CategoryListing from './components/categoryListing';
 
+/* Assets */
 import './App.css';
 
 
@@ -82,24 +85,18 @@ class App extends React.Component {
                     Snappy<span className="subhead" >Snack</span>
                 </h1>
                 <h4>Parel's own home delivery service!</h4>
-
                 <div className="homeListing" >
-
                     <div 
                         className="categoryWrap"
                         onMouseEnter={this.categoryButtonEntered}
                         onMouseLeave={this.categoryButtonLeft} >
-                        
                         <button className="categoryBtn" >Parel's Menu</button>
-
                         <div className="categoryCols" >
                             <CategoryListing  
                                 toDisplay={this.state.displayMainCategory}
                                 items={this.state.categories} />
                         </div>
                     </div>
-
-
                     <div className="productListing" >
                         {
                             this.state.products.map(function(singleProduct, key) {
