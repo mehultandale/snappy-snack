@@ -13,9 +13,6 @@ class App extends React.Component {
         document.title = "SnappySnack";
         this.state = {
             displayMainCategory: false,
-
-
-
             "categories": [
                 {
                     "id": 1,
@@ -29,6 +26,40 @@ class App extends React.Component {
                     "id": 3,
                     "name": "Breakfast"
                 }
+            ],
+            "products": [
+                {
+                    "name": "Pringles",
+                    "category": 1
+                },
+                {
+                    "name": "Tomato",
+                    "category": 2
+                },
+                {
+                    "name": "Sabudana khichdi",
+                    "category": 3
+                },
+                {
+                    "name": "Upma",
+                    "category": 3
+                },
+                {
+                    "name": "Pringles",
+                    "category": 1
+                },
+                {
+                    "name": "Tomato",
+                    "category": 2
+                },
+                {
+                    "name": "Sabudana khichdi",
+                    "category": 3
+                },
+                {
+                    "name": "Upma",
+                    "category": 3
+                }                
             ]
         };
         this.categoryButtonEntered = this.categoryButtonEntered.bind(this);
@@ -66,6 +97,24 @@ class App extends React.Component {
                                 toDisplay={this.state.displayMainCategory}
                                 items={this.state.categories} />
                         </div>
+                    </div>
+
+
+                    <div className="productListing" >
+                        {
+                            this.state.products.map(function(singleProduct, key) {
+                                return (
+                                    <div key={key} className="singleProduct" >
+                                        <img src="https://via.placeholder.com/300" />
+                                        <h4>Prod 1</h4>
+                                        <h5>Rs. 125</h5>
+                                        <h5>Delivered in 10 minutes</h5>
+                                        <button>Add to cart</button>
+                                    </div>
+
+                                );
+                            })
+                        }
                     </div>
                 </div>
             </div>

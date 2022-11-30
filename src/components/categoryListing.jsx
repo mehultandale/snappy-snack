@@ -13,7 +13,15 @@ class CategoryListing extends React.Component {
                     "category": 1
                 },
                 {
+                    "name": "Tomato",
+                    "category": 2
+                },
+                {
                     "name": "Sabudana khichdi",
+                    "category": 3
+                },
+                {
+                    "name": "Upma",
                     "category": 3
                 }
             ],

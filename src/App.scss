@@ -79,6 +79,16 @@ h4 {
 		}
 	}
 }
+.productListing {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	margin-top: 3em;
+
+	.singleProduct {
+		width: 33%;		
+	}
+}
 .categoryWrap {
 	width: fit-content;
 }
