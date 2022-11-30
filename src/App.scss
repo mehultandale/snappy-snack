@@ -1,0 +1,42 @@
+
+
+// Colors
+$red: #F08977;
+$light_red: #E5C1B3;
+
+$dark_black: #443E40;
+$light_black: #8A8686;
+
+$light_white: #FEFEFE;
+
+
+// Header
+.logo {
+	color: $light_red;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 2em;
+
+	.subhead {
+		color: $red;
+	}
+}
+h4 {
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+}
+// end Header
+
+
+// Category
+.categoryBtn {
+	font-size: 0.75em;
+	color: #fff;
+	background: $dark_black;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	padding: 0.5em 1em;
+}
