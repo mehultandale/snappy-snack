@@ -1,25 +1,57 @@
-import logo from './logo.svg';
+
+
+import React from 'react';
+
+import ItemListing from './components/itemListing';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        document.title = "SnappySnack";
+        this.state = {
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Snacks"
+                },
+                {
+                    "id": 2,
+                    "name": "Vegetables"
+                },
+                {
+                    "id": 3,
+                    "name": "Breakfast"
+                }
+            ],
+            "products": [
+                {
+                    "name": "Pringles",
+                    "category": 1
+                },
+                {
+                    "name": "Sabudana khichdi",
+                    "category": 3
+                }
+            ]
+        };
+    }
+    render() {
+        return (
+            <div>
+                <h1 className="logo" >
+                    Snappy<span className="subhead" >Snack</span>
+                </h1>
+                <h4>Parel's own home delivery service!</h4>
+                <button className="categoryBtn" >What can you get in Parel?</button>
+                <ItemListing items={this.state.categories} />
+                <ItemListing items={this.state.products} />
+            </div>
+        );
+    }
 }
+
 
 export default App;
