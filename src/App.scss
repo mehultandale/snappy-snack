@@ -11,7 +11,7 @@ $light_white: #FEFEFE;
 
 
 // Spacing
-$left_gutter: 1.5em;
+$left_gutter: 4.4em;
 
 
 // Common
@@ -88,10 +88,16 @@ h4 {
 		}
 	}
 }
+
+/* Product listing */
+.productListingWrap {
+	padding-left: 4em;
+	padding-right: 4em;
+}
 .productListing {
 	list-style-type: none;
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-columns: repeat(4, 1fr);
 	grid-row-gap: 4em;
 	grid-column-gap: 2em;
 	margin-top: 3em;
@@ -104,7 +110,7 @@ h4 {
 }
 .categoryCols {
 	position: absolute;
-	margin-left: 1.34em;
+	margin-left: $left_gutter - 0.42em;
 }
 .categoryWrap {
 	width: fit-content;

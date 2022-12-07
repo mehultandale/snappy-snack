@@ -99,21 +99,23 @@ class App extends React.Component {
                                 items={this.state.categories} />
                         </div>
                     </div>
-                    <div className="productListing" >
-                        {
-                            this.state.products.map(function(singleProduct, key) {
-                                return (
-                                    <div key={key} className="singleProduct" >
-                                        <img src="https://via.placeholder.com/300" />
-                                        <h4>Prod 1</h4>
-                                        <h5>Rs. 125</h5>
-                                        <h5>Delivered in 10 minutes</h5>
-                                        <button>Add to cart</button>
-                                    </div>
+                    <div className="productListingWrap" >
+                        <div className="productListing" >
+                            {
+                                this.state.products.map(function(singleProduct, key) {
+                                    return (
+                                        <div key={key} className="singleProduct" >
+                                            <img src="https://via.placeholder.com/100" />
+                                            <h4>Prod 1</h4>
+                                            <h5>Rs. 125</h5>
+                                            <h5>Delivered in 10 minutes</h5>
+                                            <button>Add to cart</button>
+                                        </div>
 
-                                );
-                            })
-                        }
+                                    );
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
