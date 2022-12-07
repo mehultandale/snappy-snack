@@ -81,10 +81,12 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="logo" >
-                    Snappy<span className="subhead" >Snack</span>
-                </h1>
-                <h4>Parel's own home delivery service!</h4>
+                <div className="logoWrap" >
+                    <h1 className="logo" >
+                        Snappy<span className="subhead" >Snack</span>
+                    </h1>
+                    <h4>Parel's own home delivery service!</h4>
+                </div>
                 <div className="homeListing" >
                     <div 
                         className="categoryWrap"

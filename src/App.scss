@@ -10,6 +10,10 @@ $light_black: #8A8686;
 $light_white: #FEFEFE;
 
 
+// Spacing
+$left_gutter: 1.5em;
+
+
 // Common
 .d-none {
 	display: none;
@@ -23,21 +27,24 @@ $light_white: #FEFEFE;
 
 
 // Header
+h4 {
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-top: 0em;
+}
 .logo {
 	color: $light_red;
 	text-transform: uppercase;
-	text-align: center;
-	margin-top: 2em;
+	margin-top: 1em;
+	margin-bottom: 0em;
 
 	.subhead {
 		color: $red;
 	}
 }
-h4 {
-	font-size: 12px;
-	font-weight: 500;
-	text-transform: uppercase;
-	text-align: center;
+.logoWrap {
+	padding-left: $left_gutter;
 }
 // end Header
 
@@ -51,12 +58,14 @@ h4 {
 	border: none;
 	padding: 0.5em 1em;
 	display: block;
+	margin-left: $left_gutter;
 }
 
 
 // Home page
 .homeListing {
-	padding-left: 2em;
+	width: 100%;
+	padding-bottom: 6em;
 }
 .itemListing {
 	font-size: 0.8em;
@@ -83,11 +92,19 @@ h4 {
 	list-style-type: none;
 	display: grid;
 	grid-template-columns: auto auto auto auto;
+	grid-row-gap: 4em;
+	grid-column-gap: 2em;
 	margin-top: 3em;
 
 	.singleProduct {
-		width: 33%;		
+		img {
+			width: 100%;
+		}
 	}
+}
+.categoryCols {
+	position: absolute;
+	margin-left: 1.34em;
 }
 .categoryWrap {
 	width: fit-content;
